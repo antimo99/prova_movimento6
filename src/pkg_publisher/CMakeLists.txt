@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(pkg3)
+project(publisher2)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -10,6 +10,7 @@ project(pkg3)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
+   std_msgs
 )
 
 catkin_package()
