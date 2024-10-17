@@ -37,13 +37,10 @@ class MyNode
             qf.data[5]+=M_PI/4;             //configurazione da raggiungere
 
             using namespace std::chrono_literals;
-            ros::Time t0=ros::Time::now();
-            ros::Duration t(0, 0); 
+            ros::Time t0=ros::Time::now(); 
             ros::Rate loop_rate(5); //5 Hz
             double traj_duration=8.0;
         
-             auto  t=ros::Time::now()-t0;
-
             //riempio il goal
             std_msgs::Float64MultiArray goal;
             goal.data.resize(joint_names_.size());
