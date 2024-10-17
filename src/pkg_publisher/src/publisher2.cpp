@@ -38,7 +38,7 @@ class MyNode
 
             using namespace std::chrono_literals;
             ros::Time t0=ros::Time::now();
-            rclcpp::Duration t(0, 0); 
+            roscpp::Duration t(0, 0); 
             ros::Rate loop_rate(5); //5 Hz
             double traj_duration=8.0;
         
