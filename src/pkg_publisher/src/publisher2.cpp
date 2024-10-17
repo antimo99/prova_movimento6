@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include <sensor_msgs/msg/JointState.h>
+#include <sensor_msgs/JointState.h>
 #include "publisher/quintic.hpp"
 #include "std_msgs/Float64MultiArray"
 
@@ -27,7 +27,7 @@ class MyNode
 
 
             // Attendi il singolo messaggio e salvalo nella variabile globale
-            auto msg=ros::topic::waitForMessage<sensor_msgs::msg::JointState>("joint_states",ros::Duration(1.0));
+            auto msg=ros::topic::waitForMessage<sensor_msgs::JointState>("joint_states",ros::Duration(1.0));
             for (size_t i = 0; i < msg->name.size(); ++i) 
             {
                 ROS_INFO("Nome: %s, Posizione: %f", msg->name[i].c_str(), msg->position[i]);
