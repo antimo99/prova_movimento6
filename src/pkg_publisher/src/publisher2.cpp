@@ -32,17 +32,17 @@ class MyNode
                 ROS_INFO("Nome: %s, Posizione: %f", msg->name[i].c_str(), msg->position[i]);
             }
 
-            q0=msg->position;
+            q0.data=msg->position;
             qf.data=q0.data;
             qf.data[5]+=M_PI/4;             //configurazione da raggiungere
 
             using namespace std::chrono_literals;
             ros::Time t0=ros::Time::now();
-            roscpp::Duration t(0, 0); 
+            ros::Duration t(0, 0); 
             ros::Rate loop_rate(5); //5 Hz
             double traj_duration=8.0;
         
-            t=ros::Time::now()-t0;
+             auto  t=ros::Time::now()-t0;
 
             //riempio il goal
             std_msgs::Float64MultiArray goal;
@@ -56,7 +56,7 @@ class MyNode
             command_pub.publish(goal);
             loop_rate.sleep();
      }
-}
+};
 
 int main (int argc, char **argv)
 {
