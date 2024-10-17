@@ -19,7 +19,7 @@ class MyNode
                                                 "panda_joint7"};
      MyNode()
      {
-            command_pub = n.advertise<sensor_msgs::msg::JointState>("command", 1000);
+            command_pub = n.advertise<sensor_msgs::JointState>("command", 1000);
             q0.data.resize(joint_names_.size());
             qf.data.resize(joint_names_.size());
 
