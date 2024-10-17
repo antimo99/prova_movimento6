@@ -21,7 +21,7 @@ add_executable(publisher2 src/publisher2.cpp)
 
 target_link_libraries(publisher2 
       ${catkin_LIBRARIES})cmake_minimum_required(VERSION 3.0.2)
-project(pkg3)
+project(publisher2)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -39,7 +39,7 @@ catkin_package()
 
 include_directories(${catkin_INCLUDE_DIRS})
 
-add_executable(prova3 src/prova3.cpp)
+add_executable(publisher2 src/publisher2.cpp)
 
-target_link_libraries(prova3 
+target_link_libraries(publisher2 
       ${catkin_LIBRARIES})
