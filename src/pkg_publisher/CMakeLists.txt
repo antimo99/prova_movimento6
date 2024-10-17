@@ -1,0 +1,43 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(pkg3)
+
+## Compile as C++11, supported in ROS Kinetic and newer
+# add_compile_options(-std=c++11)
+
+## Find catkin macros and libraries
+## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+## is used, also find other catkin packages
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  sensor_msgs
+)
+
+catkin_package()
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+add_executable(publisher src/publisher.cpp)
+
+target_link_libraries(prova3 
+      ${catkin_LIBRARIES})cmake_minimum_required(VERSION 3.0.2)
+project(pkg3)
+
+## Compile as C++11, supported in ROS Kinetic and newer
+# add_compile_options(-std=c++11)
+
+## Find catkin macros and libraries
+## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+## is used, also find other catkin packages
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  sensor_msgs
+)
+
+catkin_package()
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+add_executable(prova3 src/prova3.cpp)
+
+target_link_libraries(prova3 
+      ${catkin_LIBRARIES})
