@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>actionlib_tutorials</name>
+  <name>publisher2</name>
   <version>0.1.8</version>
   <description>The actionlib_tutorials package</description>
   <maintainer email="d.stonier@gmail.com">Daniel Stonier</maintainer>
